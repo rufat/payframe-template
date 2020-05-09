@@ -1,0 +1,33 @@
+.footer {
+    width: 315px;
+    margin: auto;
+    text-align: center;
+}
+
+.powered-by {
+    background-color: #F3F3F3;
+    width: 315px;
+    height: 23px;
+    border-radius: 6px;
+    font-size: 13px;
+    line-height: 23px;
+}
+
+.powered-by img {
+    height: 11px;
+    width: 8.07px;
+}
+
+.step-circle {
+    width: 7px;
+    height: 7px;
+    background-size: contain;
+}
+
+.step-inactive {
+    background: url(/assets/dot_gray.png) no-repeat;
+}
+
+.step-active {
+    background: url(/assets/dot_yellow.png) no-repeat;
+}

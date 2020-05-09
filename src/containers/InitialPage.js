@@ -18,8 +18,8 @@ function InitialPage() {
       </div>
       <div className={'content'}>
         <UserInfo />
-        <Footer/>
       </div>
+      <Footer/>
     </div>
   );
 }

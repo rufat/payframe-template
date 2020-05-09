@@ -19,7 +19,7 @@ function UserInfo() {
       </div>
       <p>Garanti için Minimum Yatırım: 20.00, Max Yatırım: 5000.00</p>
       <button className={'start-process-btn'}>
-        <img src={'./assets/lock.png'} alt={'lock'} />
+        <img src={'./assets/lock_gray.png'} alt={'lock'} />
         <span>İşlemi başlat</span>
       </button>
     </div>

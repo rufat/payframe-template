@@ -1,4 +1,5 @@
 .box {
+    position: relative;
     height: 600px;
     width: 800px;
     border: 1px #f3f3f3 solid;
@@ -53,10 +54,5 @@
     display: grid;
     align-items: center;
     justify-content: center;
-
     padding: 15px;
-}
-
-.footer {
-    margin-bottom: 0;
 }
