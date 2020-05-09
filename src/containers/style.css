@@ -50,9 +50,13 @@
 }
 
 .content {
-    display: flex;
+    display: grid;
     align-items: center;
     justify-content: center;
 
     padding: 15px;
+}
+
+.footer {
+    margin-bottom: 0;
 }

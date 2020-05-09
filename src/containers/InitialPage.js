@@ -2,6 +2,7 @@ import React from 'react';
 import './style.css';
 
 import UserInfo from '../components/steps/UserInfo/';
+import Footer from '../components/steps/Footer/';
 
 function InitialPage() {
   return (
@@ -17,6 +18,7 @@ function InitialPage() {
       </div>
       <div className={'content'}>
         <UserInfo />
+        <Footer/>
       </div>
     </div>
   );

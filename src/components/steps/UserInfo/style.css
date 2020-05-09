@@ -7,9 +7,39 @@
 
 .head img {
     margin-bottom: 8px;
-    margin-left: 33px;
+    margin: auto;
 }
 
 .form {
-    margin-top: 25px;
+    margin: 25px auto 0;
+    display: grid;
+    width: fit-content;
+}
+
+.form input:not(:last-child) {
+    margin-bottom: 11px;
+}
+
+.select-bank {
+    margin-bottom: 11px;
+    width: 313px;
+}
+
+.form p {
+    font-size: 14px;
+}
+
+.start-process-btn > img,
+.start-process-btn > span {
+  vertical-align: middle;
+}
+
+.start-process-btn > span {
+    margin-left: 7px;
+}
+
+.start-process-btn img {
+    width: 13.2px;
+    height: 18px;
+    margin-top: -5px;
 }
