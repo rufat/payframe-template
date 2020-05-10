@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.css';
 
-function UserInfo() {
+function UserInfo(props) {
   return (
     <div className={'user-info'}>
       <div className={'head'}>
@@ -18,7 +18,7 @@ function UserInfo() {
         <input type={'number'} placeholder={'Tutar'} />
       </div>
       <p className={'bank-info'}>Garanti için Minimum Yatırım: 20.00, Max Yatırım: 5000.00</p>
-      <button className={'start-process-btn'}>
+      <button onClick={() => props.setLoadingBar(true)} className={'start-process-btn'}>
         <img src={'./assets/lock_gray.png'} alt={'lock'} />
         <span>İşlemi başlat</span>
       </button>

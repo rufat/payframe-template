@@ -1,14 +1,17 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './style.css';
 
 import UserInfo from '../components/steps/UserInfo/';
+import Loading from '../components/Loading';
 import Footer from '../components/steps/Footer/';
 
 function InitialPage() {
+  const [loadingBar, setLoadingBar] = useState(false)
+
   return (
     <div className={'box'}>
       <div className={'header'}>
-        <div className={'nav'}>
+        <div className={'nav'} onClick={() => setLoadingBar(false)}>
           <img alt={'back'} src={'./assets/left_arrow.png'} />
           Geri
         </div>
@@ -17,7 +20,8 @@ function InitialPage() {
         </div>
       </div>
       <div className={'content'}>
-        <UserInfo />
+        {loadingBar && <Loading label={'İşleniyor'}/>}
+        {!loadingBar && <UserInfo setLoadingBar={setLoadingBar} />}
       </div>
       <Footer/>
     </div>
