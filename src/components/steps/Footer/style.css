@@ -1,7 +1,10 @@
 .footer {
-    width: 315px;
-    margin: auto;
+    position:absolute;
     text-align: center;
+    bottom: 5px;
+    left: 50%;
+    display: inline-block;
+    transform: translateX(-50%);
 }
 
 .powered-by {
