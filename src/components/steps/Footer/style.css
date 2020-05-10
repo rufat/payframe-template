@@ -19,15 +19,21 @@
 }
 
 .step-circle {
-    width: 7px;
     height: 7px;
-    background-size: contain;
+    width: 7px;
+    border-radius: 50%;
+    display: inline-block;
+ 
+}
+
+.step-circle:not(:last-child) {
+    margin-right: 8px;
 }
 
 .step-inactive {
-    background: url(/assets/dot_gray.png) no-repeat;
+    background-color: #C8C1B5;
 }
 
 .step-active {
-    background: url(/assets/dot_yellow.png) no-repeat;
+    background-color: #F9AC19;
 }
