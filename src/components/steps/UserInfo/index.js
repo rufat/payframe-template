@@ -17,7 +17,7 @@ function UserInfo() {
         <input type={'text'} placeholder={'Üye T.C. kimlik no'} />
         <input type={'number'} placeholder={'Tutar'} />
       </div>
-      <p>Garanti için Minimum Yatırım: 20.00, Max Yatırım: 5000.00</p>
+      <p className={'bank-info'}>Garanti için Minimum Yatırım: 20.00, Max Yatırım: 5000.00</p>
       <button className={'start-process-btn'}>
         <img src={'./assets/lock_gray.png'} alt={'lock'} />
         <span>İşlemi başlat</span>

@@ -11,6 +11,7 @@
     border-radius: 6px;
     font-size: 13px;
     line-height: 23px;
+    margin-top: 10px;
 }
 
 .powered-by img {
@@ -23,7 +24,6 @@
     width: 7px;
     border-radius: 50%;
     display: inline-block;
- 
 }
 
 .step-circle:not(:last-child) {
