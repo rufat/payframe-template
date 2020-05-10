@@ -5,6 +5,7 @@
 .loading-container p {
     font-size: 22px;
     color: #3C3C3C;
+    margin-top: 15px;
 }
 
 .loader,

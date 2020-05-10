@@ -5,6 +5,7 @@
     border: 1px #f3f3f3 solid;
     border-radius: 12px;
     box-shadow: 0 0 11px 0px #f3f3f3;
+    background-color: #FBFBFB;
 }
 
 .header {
@@ -12,6 +13,10 @@
     width: 100%;
     border-radius: 12px 12px 0 0;
     background-color: #F3F3F3;
+}
+
+.header p {
+    margin-top: 2px;
 }
 
 .nav {
@@ -23,18 +28,13 @@
     cursor: pointer;
     padding: 7px;
     border-radius: 5px;
-    transition: background-color 0.5s ease;
-}
-
-.nav:hover {
-    background-color: #dcdcdc;
-    margin-right: 10px;
-    transition: background-color 0.5s ease;
+    transition: background-color 0.1s ease;
 }
 
 .nav:active {
-    background-color: #b9b9b9;
-    transition: background-color 0.5s ease;
+    background-color: #dcdcdc;
+    margin-right: 10px;
+    transition: background-color 0.1s ease;
 }
 
 .header > .nav img {
@@ -62,4 +62,11 @@
     padding: 10px 10px 0px 15px;
     max-height: 466px;
     overflow: hidden;
+}
+
+@media only screen and (max-width: 800px) {
+    .box {
+      height: 100%;
+      width: 100%;
+    }
 }

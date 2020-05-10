@@ -1,15 +1,16 @@
-.head {
+.bank-head {
     display: grid;
     text-align: center;
     font-size: 22px;
 }
 
-.head img {
+.bank-head img {
     margin-bottom: 8px;
     margin: auto;
+    height: 100px;
 }
 
-.head p {
+.bank-head p {
     margin-top: 9px;
     margin-bottom: 0;
 }
@@ -29,24 +30,19 @@
     width: 100%;
 }
 
-.bank-info {
-    font-size: 14px;
+.bank-extra-info {
+    font-size: 9px;
     padding: 20px;
+    max-width: 300px;
+    text-align: center;
 }
 
-.start-process-btn > img,
 .start-process-btn > span {
   vertical-align: middle;
 }
 
 .start-process-btn > span {
     margin-left: 7px;
-}
-
-.start-process-btn img {
-    width: 13.2px;
-    height: 18px;
-    margin-top: -5px;
 }
 
 @media only screen and (max-width: 800px) {

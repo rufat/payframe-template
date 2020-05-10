@@ -6,7 +6,7 @@ function UserInfo(props) {
     <div className={'user-info'}>
       <div className={'head'}>
         <img alt={'logo'} src={'./assets/logo_2.png'} />
-        Lütfen Formu Doldurunuz
+        <p>Lütfen Formu Doldurunuz</p>
       </div>
       <div className={'form'}>
         <select className={'select-bank'} required>
@@ -18,7 +18,7 @@ function UserInfo(props) {
         <input type={'number'} placeholder={'Tutar'} />
       </div>
       <p className={'bank-info'}>Garanti için Minimum Yatırım: 20.00, Max Yatırım: 5000.00</p>
-      <button onClick={() => props.setLoadingBar(true)} className={'start-process-btn'}>
+      <button onClick={() => props.stepHandler()} className={'start-process-btn'}>
         <img src={'./assets/lock_gray.png'} alt={'lock'} />
         <span>İşlemi başlat</span>
       </button>
