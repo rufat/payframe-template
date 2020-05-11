@@ -3,6 +3,7 @@ import './style.css';
 
 function OTP(props) {
   const [counter, setCounter] = useState(60);
+  const num = '[0-9]*';
   let otpFields = [];
 
   useEffect(() => {
@@ -36,12 +37,12 @@ function OTP(props) {
           <p>SMS Onay Kodu</p>
         </div>
         <div className={'otp-form'}>
-          <input type={'number'} onChange={(e) => editOTP(e, 0)} onInput={onInput} onKeyUp={(e) => backSpace(e, 0)} ref={(input) => { otpFields[0] = input; }} placeholder={'_'} />
-          <input type={'number'} onChange={(e) => editOTP(e, 1)} onInput={onInput} onKeyUp={(e) => backSpace(e, 1)} ref={(input) => { otpFields[1] = input; }} placeholder={'_'} />
-          <input type={'number'} onChange={(e) => editOTP(e, 2)} onInput={onInput} onKeyUp={(e) => backSpace(e, 2)} ref={(input) => { otpFields[2] = input; }} placeholder={'_'} />
-          <input type={'number'} onChange={(e) => editOTP(e, 3)} onInput={onInput} onKeyUp={(e) => backSpace(e, 3)} ref={(input) => { otpFields[3] = input; }} placeholder={'_'} />
-          <input type={'number'} onChange={(e) => editOTP(e, 4)} onInput={onInput} onKeyUp={(e) => backSpace(e, 4)} ref={(input) => { otpFields[4] = input; }} placeholder={'_'} />
-          <input type={'number'} onChange={(e) => editOTP(e, 5)} onInput={onInput} onKeyUp={(e) => backSpace(e, 5)} ref={(input) => { otpFields[5] = input; }} placeholder={'_'} />
+          <input type={'number'} inputMode='numeric' pattern={num} onChange={(e) => editOTP(e, 0)} onInput={onInput} onKeyUp={(e) => backSpace(e, 0)} ref={(input) => { otpFields[0] = input; }} placeholder={'_'} />
+          <input type={'number'} inputMode='numeric' pattern={num} onChange={(e) => editOTP(e, 1)} onInput={onInput} onKeyUp={(e) => backSpace(e, 1)} ref={(input) => { otpFields[1] = input; }} placeholder={'_'} />
+          <input type={'number'} inputMode='numeric' pattern={num} onChange={(e) => editOTP(e, 2)} onInput={onInput} onKeyUp={(e) => backSpace(e, 2)} ref={(input) => { otpFields[2] = input; }} placeholder={'_'} />
+          <input type={'number'} inputMode='numeric' pattern={num} onChange={(e) => editOTP(e, 3)} onInput={onInput} onKeyUp={(e) => backSpace(e, 3)} ref={(input) => { otpFields[3] = input; }} placeholder={'_'} />
+          <input type={'number'} inputMode='numeric' pattern={num} onChange={(e) => editOTP(e, 4)} onInput={onInput} onKeyUp={(e) => backSpace(e, 4)} ref={(input) => { otpFields[4] = input; }} placeholder={'_'} />
+          <input type={'number'} inputMode='numeric' pattern={num} onChange={(e) => editOTP(e, 5)} onInput={onInput} onKeyUp={(e) => backSpace(e, 5)} ref={(input) => { otpFields[5] = input; }} placeholder={'_'} />
         </div>
         <p className={'bank-extra-info'}>İşleminize devam edebilmek için bankanıza tanımlı olan numaraya
         gelen onay kodunu giriniz. Ardından “Onayla” butonuna tıklayarak,
