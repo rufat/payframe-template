@@ -5,7 +5,7 @@ function Footer(props) {
     const generateSteps = () => {
         let steps = [];
         for(let x = 1; x < props.steps+1; x++) {
-            steps.push(<span className={`step-circle ${props.index === x ? 'step-active' : 'step-inactive'}`} />)
+            steps.push(<span key={x} className={`step-circle ${props.index === x ? 'step-active' : 'step-inactive'}`} />)
         }
         return steps;
     };
