@@ -18,3 +18,12 @@ body {
   justify-content: center;
   height: 100%;
 }
+
+body,html {
+  touch-action: manipulation;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin: 0
+}
