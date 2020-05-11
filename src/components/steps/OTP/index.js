@@ -1,12 +1,24 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import './style.css';
 
 function OTP(props) {
-  const [counter, setCounter] = React.useState(60);
+  const [counter, setCounter] = useState(60);
+  let otpFields = [];
 
   useEffect(() => {
     counter > 0 && setTimeout(() => setCounter(counter - 1), 1000);
   }, [counter]);
+
+  const editOTP = (e, i) => {
+    if(typeof otpFields[i+1] !== 'undefined') {
+      otpFields[i+1].value = '';
+      otpFields[i+1].focus();
+    }
+  }
+
+  const onInput = (e) => {
+    e.target.value = Math.max(0, parseInt(e.target.value) ).toString().slice(0,1)
+  }
 
   return (
     <div className={'otp-area'}>
@@ -17,12 +29,12 @@ function OTP(props) {
           <p>SMS Onay Kodu</p>
         </div>
         <div className={'otp-form'}>
-          <input type={'number'} placeholder={'_'} />
-          <input type={'number'} placeholder={'_'} />
-          <input type={'number'} placeholder={'_'} />
-          <input type={'number'} placeholder={'_'} />
-          <input type={'number'} placeholder={'_'} />
-          <input type={'number'} placeholder={'_'} />
+          <input type={'number'} onChange={(e) => editOTP(e, 0)} onInput={onInput} ref={(input) => { otpFields[0] = input; }} placeholder={'_'} />
+          <input type={'number'} onChange={(e) => editOTP(e, 1)} onInput={onInput} ref={(input) => { otpFields[1] = input; }} placeholder={'_'} />
+          <input type={'number'} onChange={(e) => editOTP(e, 2)} onInput={onInput} ref={(input) => { otpFields[2] = input; }} placeholder={'_'} />
+          <input type={'number'} onChange={(e) => editOTP(e, 3)} onInput={onInput} ref={(input) => { otpFields[3] = input; }} placeholder={'_'} />
+          <input type={'number'} onChange={(e) => editOTP(e, 4)} onInput={onInput} ref={(input) => { otpFields[4] = input; }} placeholder={'_'} />
+          <input type={'number'} onChange={(e) => editOTP(e, 5)} onInput={onInput} ref={(input) => { otpFields[5] = input; }} placeholder={'_'} />
         </div>
         <p className={'bank-extra-info'}>İşleminize devam edebilmek için bankanıza tanımlı olan numaraya
         gelen onay kodunu giriniz. Ardından “Onayla” butonuna tıklayarak,
