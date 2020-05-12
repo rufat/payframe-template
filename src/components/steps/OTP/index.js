@@ -11,15 +11,22 @@ function OTP(props) {
   }, [counter]);
 
   const editOTP = (e, i) => {
-    if(typeof otpFields[i+1] !== 'undefined') {
-      otpFields[i+1].value = '';
-      otpFields[i+1].focus();
+    let c = i;
+    if(otpFields.length - c === 3) c = c+1;
+    if(typeof otpFields[c+1] !== 'undefined') {
+      otpFields[c+1].value = '';
+      otpFields[c+1].focus();
     }
   }
 
   const backSpace = (e, i) => {
+    let isDelete = true;
+    if(otpFields.length-1 === i) {
+      isDelete = false;
+      i = i-1;
+    }
     if (e.keyCode === 8 && typeof otpFields[i-1] !== 'undefined') {
-      otpFields[i-1].value = '';
+      if(isDelete) otpFields[i-1].value = '';
       otpFields[i-1].focus();
     }
   }
@@ -42,7 +49,7 @@ function OTP(props) {
           <input type={'number'} inputMode='numeric' pattern={num} onChange={(e) => editOTP(e, 2)} onInput={onInput} onKeyUp={(e) => backSpace(e, 2)} ref={(input) => { otpFields[2] = input; }} placeholder={'_'} />
           <input type={'number'} inputMode='numeric' pattern={num} onChange={(e) => editOTP(e, 3)} onInput={onInput} onKeyUp={(e) => backSpace(e, 3)} ref={(input) => { otpFields[3] = input; }} placeholder={'_'} />
           <input type={'number'} inputMode='numeric' pattern={num} onChange={(e) => editOTP(e, 4)} onInput={onInput} onKeyUp={(e) => backSpace(e, 4)} ref={(input) => { otpFields[4] = input; }} placeholder={'_'} />
-          <input type={'number'} inputMode='numeric' pattern={num} onChange={(e) => editOTP(e, 5)} onInput={onInput} onKeyUp={(e) => backSpace(e, 5)} ref={(input) => { otpFields[5] = input; }} placeholder={'_'} />
+          <input type={'number'} inputMode='numeric' pattern={num} onChange={(e) => editOTP(e, 6)} onInput={onInput} onKeyUp={(e) => backSpace(e, 6)} ref={(input) => { otpFields[6] = input; }} placeholder={'_'} />
         </div>
         <p className={'bank-extra-info'}>İşleminize devam edebilmek için bankanıza tanımlı olan numaraya
         gelen onay kodunu giriniz. Ardından “Onayla” butonuna tıklayarak,

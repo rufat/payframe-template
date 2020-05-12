@@ -12,7 +12,7 @@ import Footer from '../components/steps/Footer/';
 function InitialPage() {
   const stepMaxIndex = 4;
   const [loadingLabel, setLoadingLabel] = useState('İşleniyor');
-  const [stepIndex, setStepIndex] = useState(1);
+  const [stepIndex, setStepIndex] = useState(3);
   const [loadingBar, setLoadingBar] = useState(false)
 
   const stepHandler = (goBack = false, step = null) => {
