@@ -87,7 +87,7 @@
     display: inline-block;
     margin-top: 1px;
     height: 31px;
-    width: 31px;
+    min-width: 31px;
     border-radius: 50%;
     text-align: center;
     font-size: 14px;
@@ -115,7 +115,7 @@
 /* BEGIN FOOTER */
 
 .footer {
-    margin-top: 40px;
+    margin-top: 25px;
     text-align: center;
     font-size: 12px;
 }
@@ -143,6 +143,9 @@
 @media only screen and (max-width: 850px) {
     .header > .items, .wizard, .footer {
         max-width: unset;
+    }
+    .page-title {
+        text-align: center;
     }
 }
 
