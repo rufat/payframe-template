@@ -142,16 +142,16 @@
 
 @media only screen and (max-width: 850px) {
     .header > .items, .wizard, .footer {
-        max-width: unset;
+        max-width: 98%;
     }
     .page-title {
         text-align: center;
     }
 }
 
-@media only screen and (min-width: 1500px) {
+@media only screen and (min-width: 2300px) {
     .header > .items, .wizard, .footer {
-        /*max-width: 800px !important;*/
+        max-width: 937px;
     }
 }
 
