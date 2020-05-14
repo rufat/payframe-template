@@ -85,20 +85,20 @@
 
 .steps > .step-item > .step-header > .step-number {
     display: inline-block;
-    padding-top: 9px;
-    height: 21px;
+    margin-top: 1px;
+    height: 31px;
     width: 31px;
     border-radius: 50%;
     text-align: center;
     font-size: 14px;
     font-weight: bold;
+    line-height: 31px;
     color: #FFFFFF;
     background-color: #6B30FF;
 }
 
 .steps > .step-item > .step-header > .step-text {
     margin-left: 15px;
-    margin-top: 5px;
 }
 
 .steps > .step-item > .step-header > .step-text > .step-title {
