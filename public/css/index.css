@@ -3,11 +3,15 @@
 
 @font-face {
     font-family: 'Poppins';
-    src: url('/fonts/Poppins-Medium.ttf') format('truetype');
-    /*src: url('/fonts/Poppins.woff2') format('woff2'),*/
-    /*url('/fonts/Poppins.woff') format('woff'),*/
-    /*url('/fonts/Poppins.ttf') format('truetype'),*/
-    /*url('/fonts/Poppins.otf') format('opentype');*/
+    src: url('/fonts/Poppins.woff2') format('woff2'),
+    url('/fonts/Poppins.woff') format('woff'),
+    url('/fonts/Poppins.ttf') format('truetype'),
+    url('/fonts/Poppins.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'SegoeUI-Bold';
+    src: url('/fonts/SegoeUI-Bold.woff') format('woff');
 }
 
 html, body, #root, .container {
@@ -16,9 +20,7 @@ html, body, #root, .container {
 
 body {
     margin: 0;
-    font-family: 'Poppins', 'Segoe UI', 'SegoeUI-Bold', -apple-system, BlinkMacSystemFont, 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+    font-family: -apple-system,system-ui,BlinkMacSystemFont,"SegoeUI-Bold","Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background-color: #F0F1F5;

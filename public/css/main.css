@@ -85,20 +85,20 @@
 
 .steps > .step-item > .step-header > .step-number {
     display: inline-block;
-    padding-top: 9px;
-    height: 21px;
-    width: 31px;
+    margin-top: 1px;
+    height: 31px;
+    min-width: 31px;
     border-radius: 50%;
     text-align: center;
     font-size: 14px;
     font-weight: bold;
+    line-height: 31px;
     color: #FFFFFF;
     background-color: #6B30FF;
 }
 
 .steps > .step-item > .step-header > .step-text {
     margin-left: 15px;
-    margin-top: 5px;
 }
 
 .steps > .step-item > .step-header > .step-text > .step-title {
@@ -115,7 +115,7 @@
 /* BEGIN FOOTER */
 
 .footer {
-    margin-top: 40px;
+    margin-top: 25px;
     text-align: center;
     font-size: 12px;
 }
@@ -142,13 +142,16 @@
 
 @media only screen and (max-width: 850px) {
     .header > .items, .wizard, .footer {
-        max-width: unset;
+        max-width: 98%;
+    }
+    .page-title {
+        text-align: center;
     }
 }
 
-@media only screen and (min-width: 1500px) {
+@media only screen and (min-width: 2300px) {
     .header > .items, .wizard, .footer {
-        /*max-width: 800px !important;*/
+        max-width: 937px;
     }
 }
 
