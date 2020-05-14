@@ -115,7 +115,7 @@
 /* BEGIN FOOTER */
 
 .footer {
-    margin-top: 25px;
+    margin: 25px auto 25px auto;
     text-align: center;
     font-size: 12px;
 }
