@@ -1,0 +1,25 @@
+@import "skin.css";
+@import "main.css";
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('/fonts/Poppins-Medium.ttf') format('truetype');
+    /*src: url('/fonts/Poppins.woff2') format('woff2'),*/
+    /*url('/fonts/Poppins.woff') format('woff'),*/
+    /*url('/fonts/Poppins.ttf') format('truetype'),*/
+    /*url('/fonts/Poppins.otf') format('opentype');*/
+}
+
+html, body, #root, .container {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #F0F1F5;
+}
