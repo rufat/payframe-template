@@ -1,11 +1,7 @@
 input, select {
-  height: 45px;
-  border: 1.5px #DDDDDD solid;
-  background-color: #FFFFFF;
-  padding-left: 10px;
+  border: unset;
   color: black;
   outline: none;
-  font-size: 18px;
   -webkit-appearance: none;
 }
 
@@ -19,12 +15,10 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 }
 
 select {
-  font-size: 18px;
-  height: 50px;
-  width: 300px;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  cursor: pointer;
 }
 
 select::-ms-expand {
@@ -46,17 +40,10 @@ option {
 button {
   background-color: #F9AC19;
   color: #615d57;
-  height: 44px;
-  width: 315px;
   outline: none;
   border: none;
-  font-size: 15px;
-  font-weight: 700;
-  text-transform: uppercase;
   cursor: pointer;
-  border-radius: 5px;
   display: block;
-  margin: auto;
   transition: background-color 0.3s ease;
 }
 
