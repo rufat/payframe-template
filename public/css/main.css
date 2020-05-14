@@ -75,17 +75,45 @@
     border-radius: 10px;
     padding: 25px;
     background-color: #FFFFFF;
-    box-shadow: 0 5px 8px 0 #9999992b
+    box-shadow: 0 5px 8px 0 #9999992b;
+    transition: height 0.3s ease-out;
+}
+
+.steps > .step-item:not(:last-child) {
+    margin-bottom: 25px;
+}
+
+.collapsed {
+    height: 28px !important;
 }
 
 .steps > .step-item > .step-header {
     display: flex;
     width: 100%;
+    justify-content: space-between;
 }
 
-.steps > .step-item > .step-header > .step-number {
-    display: inline-block;
-    margin-top: 1px;
+.steps > .step-item > .step-content {
+    padding-top: 25px;
+}
+
+.steps > .step-item > .step-header > .step-left {
+    display: flex;
+}
+
+.steps > .step-item > .step-header > .step-left > .step-number-inactive {
+    background-color: #D8E0ED;
+}
+
+.steps > .step-item > .step-header > .step-left > .step-number-active {
+    background-color: #6B30FF;
+}
+
+.steps > .step-item > .step-header > .step-left > .step-number-filled {
+    background-color: #36C756;
+}
+
+.steps > .step-item > .step-header > .step-left > .step-number {
     height: 31px;
     min-width: 31px;
     border-radius: 50%;
@@ -94,23 +122,40 @@
     font-weight: bold;
     line-height: 31px;
     color: #FFFFFF;
-    background-color: #6B30FF;
+    transition: background-color 0.3s ease-out;
 }
 
-.steps > .step-item > .step-header > .step-text {
+.steps > .step-item > .step-header > .step-left > .step-text {
     margin-left: 15px;
 }
 
-.steps > .step-item > .step-header > .step-text > .step-title {
-    color: #6B30FF;
-    font-size: 19px;
+.steps > .step-item > .step-header > .step-left > .step-text > .step-title-filled {
+    color: #36C756 !important;
+    margin-top: 5px;
 }
 
-.steps > .step-item > .step-header > .step-text > .step-desc {
+.steps > .step-item > .step-header > .step-left > .step-text > .step-title-collapsed {
+    color: #222222 !important;
+    margin-top: 5px;
+}
+
+.steps > .step-item > .step-header > .step-left > .step-text > .step-title {
+    color: #6B30FF;
+    font-size: 19px;
+    transition: margin-top 0.3s ease-out;
+}
+
+.steps > .step-item > .step-header > .step-left > .step-text > .step-desc {
     font-size: 14px;
 }
 
-    /* END WIZARD-STEPS */
+.steps > .step-item > .step-header > .step-edit-btn {
+    margin-top: 5px;
+    cursor: pointer;
+    color: #C4CCD8;
+}
+
+/* END WIZARD-STEPS */
 
 /* BEGIN FOOTER */
 
