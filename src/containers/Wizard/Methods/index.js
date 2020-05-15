@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 
 function Methods() {
-    const [activeMethod, setActiveMethod] = useState(null)
+    const [activeMethod, setActiveMethod] = useState(1)
 
     const selectMethod = (i) => {
         setActiveMethod(i);
