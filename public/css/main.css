@@ -71,7 +71,6 @@
 
 .steps > .step-item {
     display: flow-root;
-    max-height: 380px;
     border: 1px #D8E0ED solid;
     border-radius: 10px;
     padding: 25px;
@@ -96,6 +95,7 @@
 
 .steps > .step-item > .step-content {
     padding-top: 25px;
+    padding-bottom: 25px;
 }
 
 .steps > .step-item > .step-bottom {
@@ -210,8 +210,19 @@
     .header > .items, .wizard, .footer {
         max-width: 98%;
     }
+
     .page-title {
         text-align: center;
+    }
+
+    .method-list {
+        display: block;
+    }
+
+    .method-item {
+        width: 100%;
+        margin: 0 0 10px 0;
+        flex: unset !important;
     }
 }
 

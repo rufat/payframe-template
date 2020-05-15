@@ -57,7 +57,7 @@ function Index() {
     const scrollToRef = (i) => {
         if(typeof steps.childNodes[i] === 'undefined') return;
         const ref = steps.childNodes[i];
-        ref.scrollIntoView({ behavior: 'smooth', block: "center"});
+        ref.scrollIntoView({ behavior: 'smooth', inline: "center"});
     }
 
     const nextStep = (i) => {

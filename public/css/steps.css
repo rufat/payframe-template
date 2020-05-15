@@ -1,0 +1,82 @@
+/* BEGIN METHODS STEP */
+
+.method-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.method-item {
+    position: relative;
+    display: flex;
+    flex: 1 0 41%;
+    height: 125px;
+    width: 100%;
+    margin: 0 5px 10px 5px;
+    border: 2px #D8E0ED solid;
+    border-radius: 4px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: border 0.2s ease-out;
+}
+
+.method-item-active {
+    border: 2px #6B30FF solid;
+    transition: border 0.2s ease-out;
+}
+
+.method-item-active-mark {
+    position: absolute;
+    float: right;
+    right: 0;
+}
+
+.method-item-active-mark .tri {
+    position: absolute;
+    float: right;
+    right: 0;
+    border-right: 23px solid #6B30FF;
+    border-bottom: 27px solid transparent;
+    height: 0;
+    width: 0;
+    z-index: 1;
+}
+
+.method-item-active-mark .check {
+    position: absolute;
+    float: right;
+    right: -1px;
+    top: 4px;
+    height: 15px;
+    width: 15px;
+    background-image: url("/images/check-mark.svg");
+    background-repeat: no-repeat;
+    z-index: 2;
+}
+
+.method-item-icon {
+    display: block;
+    height: 40px;
+    width: 45px;
+    margin-top: 45px;
+    margin-left: 25px;
+    background-image: url("/images/bank-building.svg");
+    background-repeat: no-repeat;
+}
+
+.method-label {
+    margin-top: 40px;
+    margin-left: 15px;
+}
+
+.method-label > .method-title {
+    font-size: 19px;
+    color: #253238;
+}
+
+.method-label > .method-desc {
+    font-size: 14px;
+    color: #7A8391;
+    margin-top: 10px;
+}
+
+/* END METHODS STEP */
