@@ -1,13 +1,13 @@
 import React from 'react';
 import Header from "../components/Header";
-import Wizard from "./Wizard";
+import Index from "./Wizard/";
 import Footer from "./Footer";
 
 function Main() {
     return (
         <div className={'container'}>
             <Header/>
-            <Wizard/>
+            <Index/>
             <Footer/>
         </div>
     );
