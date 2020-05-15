@@ -20,7 +20,7 @@ html, body, #root, .container {
 
 body {
     margin: 0;
-    font-family: -apple-system,system-ui,BlinkMacSystemFont,Roboto,"Helvetica Neue",Arial,sans-serif,"SegoeUI-Bold","Segoe UI";
+    font-family: "Segoe UI",-apple-system,system-ui,BlinkMacSystemFont,Roboto,"Helvetica Neue",Arial,sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background-color: #F0F1F5;
