@@ -70,6 +70,7 @@
 }
 
 .steps > .step-item {
+    display: flow-root;
     max-height: 380px;
     border: 1px #D8E0ED solid;
     border-radius: 10px;
@@ -95,6 +96,23 @@
 
 .steps > .step-item > .step-content {
     padding-top: 25px;
+}
+
+.steps > .step-item > .step-bottom {
+    display: flex;
+    float: right;
+    align-items: center;
+}
+
+.steps > .step-item > .step-bottom button {
+    width: 140px;
+    height: 48px;
+    margin-left: 20px;
+}
+
+.steps > .step-item > .step-bottom span {
+    font-size: 14px;
+    color: #7A8391;
 }
 
 .steps > .step-item > .step-header > .step-left {

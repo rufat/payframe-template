@@ -1,17 +1,21 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import StepItem from '../components/steps/StepItem';
 
 function Wizard() {
-    const [activeIndex, setActiveIndex] = useState(0);
+    const [activeIndex, setActiveIndex] = useState(1);
+    const [maxStep, setMaxStep] = useState(0);
     const [filledSteps, setFilledSteps] = useState([]);
+    let steps = {};
+
+    useEffect(() => {
+        setMaxStep(steps.childNodes.length)
+    }, [steps.childNodes])
 
     const nextStep = (i) => {
         setActiveIndex(prevS => prevS+1);
-        setFilledSteps(prevS => [...prevS, i]);
-    }
-
-    const backStep = () => {
-        setActiveIndex(prevS => prevS-1);
+        if(filledSteps.indexOf(i) === -1) {
+            setFilledSteps(prevS => [...prevS, i]);
+        }
     }
 
     const editStep = (i) => {
@@ -21,28 +25,54 @@ function Wizard() {
     return (
         <div className={'wizard'}>
             <div className={'page-title'}><span>Masterpay</span> Para Yatırma</div>
-            <div className={'steps'}>
-                <StepItem
-                    index={0}
-                    expanded={activeIndex === 0}
-                    filled={filledSteps.indexOf(0) !== -1}
-                    editStep={editStep}
-                    title={'Para Yatırma Yöntemi'}
-                    desc={'Para yatırma seçenekleri sağlayıcınıza göre değişiklik gösterebilir.'}
-                >
-                    asd
-                    <button onClick={() => nextStep(0)}>devam</button>
-                </StepItem>
+            <div className={'steps'} ref={el => steps = el}>
                 <StepItem
                     index={1}
-                    expanded={activeIndex === 1}
-                    filled={filledSteps.indexOf(1) !== -1}
+                    activeIndex={activeIndex}
+                    filledSteps={filledSteps}
+                    maxStep={maxStep}
+                    nextStep={nextStep}
                     editStep={editStep}
-                    title={'sada'}
-                    desc={'Padsadişiklik gösterebilir.'}
+                    title={'Yatırım yöntemi'}
+                    desc={'Para yatırma seçenekleri sağlayıcınıza göre değişiklik gösterebilir.'}
                 >
-                    123
-                    <button onClick={() => backStep()}>düzenle</button>
+
+                </StepItem>
+                <StepItem
+                    index={2}
+                    activeIndex={activeIndex}
+                    filledSteps={filledSteps}
+                    maxStep={maxStep}
+                    nextStep={nextStep}
+                    editStep={editStep}
+                    title={'Banka seçiniz'}
+                    desc={'Müşterisi olduğunuz bankalardan birini seçiniz.'}
+                >
+
+                </StepItem>
+                <StepItem
+                    index={3}
+                    activeIndex={activeIndex}
+                    filledSteps={filledSteps}
+                    maxStep={maxStep}
+                    nextStep={nextStep}
+                    editStep={editStep}
+                    title={'Transfer miktarı'}
+                    desc={'Yatırım yapacağınız miktarı giriniz.'}
+                >
+
+                </StepItem>
+                <StepItem
+                    index={4}
+                    activeIndex={activeIndex}
+                    filledSteps={filledSteps}
+                    maxStep={maxStep}
+                    nextStep={nextStep}
+                    editStep={editStep}
+                    title={'Transfer işlemi'}
+                    desc={'Lütfen transfer işlemi seçiniz.'}
+                >
+
                 </StepItem>
             </div>
         </div>
