@@ -28,7 +28,7 @@
     height: 54px;
     width: 200px;
     margin-top: -10px;
-    background-image: url("/images/logo.svg");
+    background-image: url("/images/logo.png");
 }
 
 .lang {
@@ -178,21 +178,23 @@
 /* BEGIN FOOTER */
 
 .footer {
-    margin: 25px auto 25px auto;
+    margin: 25px auto;
     text-align: center;
     font-size: 12px;
+    overflow: auto;
 }
 
 .footer > .f-logo {
     height: 54px;
     width: 200px;
     margin: auto;
-    background-image: url("/images/logo-gray.svg");
+    background-image: url("/images/logo-gray.png");
 }
 
 .footer > .f-title {
     margin-top: 10px;
     color: #777777;
+    margin-bottom: 25px;
 }
 
 .footer span {
