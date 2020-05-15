@@ -165,6 +165,7 @@
 
 .steps > .step-item > .step-header > .step-left > .step-text > .step-desc {
     font-size: 14px;
+    margin-top: 10px;
 }
 
 .steps > .step-item > .step-header > .step-edit-btn {
