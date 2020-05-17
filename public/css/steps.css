@@ -53,18 +53,20 @@
     z-index: 2;
 }
 
+.method-content {
+    padding: 40px 40px 40px 25px;
+    display: flex;
+}
+
 .method-item-icon {
     display: block;
     height: 40px;
     width: 45px;
-    margin-top: 45px;
-    margin-left: 25px;
     background-image: url("/images/bank-building.svg");
     background-repeat: no-repeat;
 }
 
 .method-label {
-    margin-top: 40px;
     margin-left: 15px;
 }
 
