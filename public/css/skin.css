@@ -57,3 +57,21 @@ button:active {
   background-color: #340c98;
   transition: background-color 0.4s ease;
 }
+
+.notify {
+  padding: 26px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.notify img {
+  margin-right: 15px;
+}
+
+.notify-warn {
+  background-color: #FFF9EC;
+}
+
+.notify-err {
+  background-color: #FFF1F0;
+}

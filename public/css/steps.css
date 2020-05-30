@@ -82,3 +82,25 @@
 }
 
 /* END METHODS STEP */
+
+/* BEGIN BANKS STEP */
+
+.bank-list-select {
+    height: 65px;
+    width: 329px;
+    border: 1px #D8E0ED solid;
+    padding-left: 20px;
+    color: #7A8391;
+}
+
+.bank-list > .bank-content {
+    display: flex;
+    margin-bottom: 25px;
+}
+
+.bank-list > .bank-content img {
+    width: 151px;
+    margin-left: 15px;
+}
+
+/* END BANKS STEP */
