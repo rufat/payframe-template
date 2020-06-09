@@ -114,15 +114,6 @@
     text-align: center;
 }
 
-.bank-auth-content input {
-    height: 65px;
-    width: 329px;
-    border: 1px #D8E0ED solid;
-    border-radius: 3px;
-    padding-left: 20px;
-    color: #7A8391;
-}
-
 .bank-auth-content > .credential-inputs {
     display: inline-grid;
     margin: 30px 0 30px 0;
@@ -135,6 +126,24 @@
 .bank-auth-content p {
     color: #7A8391;
     margin-top: 15px;
+}
+
+/* END BANK AUTH STEP */
+
+/* END BANK AUTH STEP */
+
+.amount-step {
+    text-align: center;
+}
+
+.amount-step > .amount {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.amount-step span {
+    font-size: 16px;
+    color: #7A8391;
 }
 
 /* END BANK AUTH STEP */
