@@ -75,3 +75,16 @@ button:active {
 .notify-err {
   background-color: #FFF1F0;
 }
+
+.c-input-tile {
+  position: relative;
+}
+
+.c-input-tile span {
+  position: absolute;
+  background-color: white;
+  left: 15px;
+  top: -8px;
+  color: #D8E0ED;
+  padding: 0 5px 0 5px;
+}

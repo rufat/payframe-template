@@ -83,6 +83,10 @@
 
 /* END METHODS STEP */
 
+.bank-logo {
+    width: 151px;
+}
+
 /* BEGIN BANKS STEP */
 
 .bank-list-select {
@@ -99,8 +103,38 @@
 }
 
 .bank-list > .bank-content img {
-    width: 151px;
     margin-left: 15px;
 }
 
 /* END BANKS STEP */
+
+/* BEGIN BANK AUTH STEP */
+
+.bank-auth-content {
+    text-align: center;
+}
+
+.bank-auth-content input {
+    height: 65px;
+    width: 329px;
+    border: 1px #D8E0ED solid;
+    border-radius: 3px;
+    padding-left: 20px;
+    color: #7A8391;
+}
+
+.bank-auth-content > .credential-inputs {
+    display: inline-grid;
+    margin: 30px 0 30px 0;
+}
+
+.bank-auth-content > .credential-inputs div:not(:last-child) {
+    margin-bottom: 25px;
+}
+
+.bank-auth-content p {
+    color: #7A8391;
+    margin-top: 15px;
+}
+
+/* END BANK AUTH STEP */

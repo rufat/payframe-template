@@ -1,8 +1,9 @@
 import React, {useState, useEffect, useRef} from 'react';
 import StepItem from '../../components/steps/StepItem';
-import {STEP_METHODS, STEP_BANKS, STEP_AMOUNT, STEP_TRANSFER} from '../../constants';
+import {STEP_METHODS, STEP_BANKS, STEP_BANK_AUTH, STEP_AMOUNT, STEP_TRANSFER} from '../../constants';
 import Methods from './Methods/';
 import Banks from './Banks/';
+import BankAuth from './BankAuth/';
 import Amount from './Amount/';
 import Transfer from './Transfer/';
 
@@ -10,7 +11,7 @@ function Index() {
     const [activeIndex, setActiveIndex] = useState(1);
     const [maxStep, setMaxStep] = useState(0);
     const [filledSteps, setFilledSteps] = useState([]);
-    const stepPages = [STEP_METHODS, STEP_BANKS, STEP_AMOUNT, STEP_TRANSFER];
+    const stepPages = [STEP_METHODS, STEP_BANKS, STEP_BANK_AUTH, STEP_AMOUNT, STEP_TRANSFER];
     let steps = useRef();
 
     useEffect(() => {
@@ -23,6 +24,8 @@ function Index() {
                 return <Methods/>;
             case STEP_BANKS.name:
                 return <Banks/>
+            case STEP_BANK_AUTH.name:
+                return <BankAuth/>
             case STEP_AMOUNT.name:
                 return <Amount/>
             case STEP_TRANSFER.name:
