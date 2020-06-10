@@ -1,8 +1,13 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import OtpInput from 'react-otp-input';
 
 function Verify() {
     const [code, setCode] = useState('')
+    const [counter, setCounter] = useState(60)
+
+    useEffect(() => {
+        counter > 0 && setTimeout(() => setCounter(counter - 1), 1000);
+    }, [counter]);
 
     return (
         <div className={'verify-step'}>
@@ -18,7 +23,7 @@ function Verify() {
                     shouldAutoFocus
                 />
                 <div className={'auth-countdown'}>
-                    46 Saniye
+                    {counter} saniye
                 </div>
                 <p className={'auth-note'}>İşleminize devam edebilmek için Garanti BBVA hesabınıza tanımlı olan numaraya
                     gelen onay kodunu giriniz. Ardından “Devam” butonuna tıklayarak, işlemi gönderin.</p>
