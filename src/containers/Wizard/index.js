@@ -1,18 +1,27 @@
 import React, {useState, useEffect, useRef} from 'react';
 import StepItem from '../../components/steps/StepItem';
-import {STEP_METHODS, STEP_BANKS, STEP_BANK_AUTH, STEP_AMOUNT, STEP_VERIFY, STEP_TRANSFER} from '../../constants';
+import {
+    STEP_METHODS,
+    STEP_BANKS,
+    STEP_BANK_AUTH,
+    STEP_AMOUNT,
+    STEP_VERIFY,
+    STEP_ACCOUNT,
+    STEP_TRANSFER
+} from '../../constants';
 import Methods from './Methods/';
 import Banks from './Banks/';
 import BankAuth from './BankAuth/';
 import Amount from './Amount/';
 import Verify from './Verify/';
 import Transfer from './Transfer/';
+import Account from "./Account";
 
 function Index() {
     const [activeIndex, setActiveIndex] = useState(1);
     const [maxStep, setMaxStep] = useState(0);
     const [filledSteps, setFilledSteps] = useState([]);
-    const stepPages = [STEP_METHODS, STEP_BANKS, STEP_BANK_AUTH, STEP_AMOUNT, STEP_VERIFY, STEP_TRANSFER];
+    const stepPages = [STEP_METHODS, STEP_BANKS, STEP_BANK_AUTH, STEP_AMOUNT, STEP_VERIFY, STEP_ACCOUNT, STEP_TRANSFER];
     let steps = useRef();
 
     useEffect(() => {
@@ -31,6 +40,8 @@ function Index() {
                 return <Amount/>
             case STEP_VERIFY.name:
                 return <Verify/>
+            case STEP_ACCOUNT.name:
+                return <Account/>
             case STEP_TRANSFER.name:
                 return <Transfer/>
             default:
@@ -63,7 +74,7 @@ function Index() {
 
     const scrollToRef = (i) => {
         if (typeof steps.childNodes[i] === 'undefined') return;
-        const ref = steps.childNodes[i-1];
+        const ref = steps.childNodes[i - 1];
         ref.scrollIntoView({behavior: 'smooth', inline: "center"});
     }
 

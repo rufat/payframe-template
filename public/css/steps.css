@@ -90,11 +90,7 @@
 /* BEGIN BANKS STEP */
 
 .bank-list-select {
-    height: 65px;
     width: 329px;
-    border: 1px #D8E0ED solid;
-    padding-left: 20px;
-    color: #7A8391;
 }
 
 .bank-list > .bank-content {
@@ -188,6 +184,28 @@
 
 .verify-step > .verify-step-otp > .auth-note {
     color: #7A8391;
+}
+
+/* END VERIFY STEP */
+
+/* END VERIFY STEP */
+
+.account-step > .account-content {
+    display: grid;
+}
+
+.account-step > .account-content p {
+    margin: 15px 0 15px 0;
+    color: #7A8391;
+    font-size: 14px;
+}
+
+.account-step > .account-content img {
+    margin: auto;
+}
+
+.account-step > .account-content select {
+    width: 100%
 }
 
 /* END VERIFY STEP */

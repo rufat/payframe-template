@@ -28,6 +28,12 @@ export const STEP_VERIFY = {
     desc: "Telefonunuza gelen kodu giriniz.",
     editable: false
 };
+export const STEP_ACCOUNT = {
+    name: "STEP_ACCOUNT",
+    title: "Hesap seçimi",
+    desc: "Lütfen TL olan banka hesabınızı seçiniz.",
+    editable: true
+};
 export const STEP_TRANSFER = {
     name: "STEP_TRANSFER",
     title: "Transfer işlemi",
