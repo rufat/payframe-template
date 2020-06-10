@@ -232,6 +232,11 @@
     .method-desc {
         font-size: 13px !important;
     }
+
+    .vso-input {
+        width: 35px !important;
+        height: 45px !important;
+    }
 }
 
 @media only screen and (min-width: 2300px) {
@@ -247,6 +252,11 @@
 
     .logo {
         margin: auto;
+    }
+
+    .vso-input {
+        width: 25px !important;
+        height: 35px !important;
     }
 }
 
