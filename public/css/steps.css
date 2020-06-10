@@ -154,8 +154,8 @@
 }
 
 .verify-step > .verify-step-otp p {
-    margin-top:  20px;
-    margin-bottom:  20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .vso-input {
@@ -209,3 +209,88 @@
 }
 
 /* END VERIFY STEP */
+
+/* BEGIN FINALIZE STEP */
+
+.finalize-step {
+    position: relative;
+    display: grid;
+    width: 570px;
+    text-align: center;
+    background-color: #FFFFFF;
+    border: 1px solid #D8E0ED;
+    box-shadow: 0 0 10px 0 #d6d6d6;
+    border-radius: 8px;
+    margin: 25px auto;
+}
+
+.finalize-step > .success-mark {
+    height: 125px;
+    width: 125px;
+    margin: 40px auto 0 auto;
+    background: url(/images/success.svg);
+}
+
+.finalize-step > .transfer-info {
+    margin-top: 15px;
+}
+
+.finalize-step > .transfer-info span {
+    font-size: 28px;
+    color: #6B30FF;
+}
+
+.finalize-step > .transfer-info p {
+    font-size: 14px;
+    color: #7A8391;
+    margin-top: 10px;
+}
+
+.finalize-step > .transfer-message {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.finalize-step > .transfer-message span {
+    font-size: 24px;
+}
+
+.finalize-step > .transfer-message p {
+    max-width: 370px;
+    margin: 10px auto;
+    font-size: 14px;
+    color: #7A8391;
+}
+
+.transfer-actions {
+    display: flex;
+    margin: 35px auto;
+}
+
+.transfer-actions button {
+    height: 48px;
+    width: 180px;
+}
+
+.transfer-actions button:not(:last-child) {
+    margin-right: 10px;
+}
+
+.finalize-footer {
+    height: 65px;
+    width: 100%;
+    margin-top: 15px;
+    line-height: 60px;
+    text-align: center;
+    background-color: #F6F7F9;
+    border-top: 1px solid #D8E0ED;
+    color: #7A8391;
+}
+
+.finalize-footer a {
+    font-weight: bold;
+    color: #6B30FF;
+    text-decoration: unset;
+}
+
+/* END FINALIZE STEP */

@@ -62,6 +62,25 @@ button:active {
     transition: background-color 0.4s ease;
 }
 
+.inverted-btn {
+    background-color: #E9E0FF;
+    border: 1px solid #6B30FF;
+    color: #6B30FF;
+    transition: background-color 0.4s ease;
+}
+
+.inverted-btn:hover {
+    background-color: #7947f7;
+    color: #ffffff;
+    transition: background-color 0.4s ease;
+}
+
+.inverted-btn:active {
+    background-color: #340c98;
+    color: #ffffff;
+    transition: background-color 0.4s ease;
+}
+
 .notify {
     padding: 26px;
     border-radius: 5px;

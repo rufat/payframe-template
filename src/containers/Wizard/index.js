@@ -16,8 +16,10 @@ import Amount from './Amount/';
 import Verify from './Verify/';
 import Transfer from './Transfer/';
 import Account from "./Account";
+import Finalize from "./Finalize";
 
-function Index() {
+function Wizard() {
+    const [hasPaymentDone, setHasPaymentDone] = useState(false);
     const [activeIndex, setActiveIndex] = useState(1);
     const [maxStep, setMaxStep] = useState(0);
     const [filledSteps, setFilledSteps] = useState([]);
@@ -25,7 +27,11 @@ function Index() {
     let steps = useRef();
 
     useEffect(() => {
-        setMaxStep(steps.childNodes.length)
+        try {
+            setMaxStep(steps.childNodes.length)
+        } catch (ex) {
+            console.error(ex);
+        }
     }, [steps.childNodes])
 
     const getStepDOM = (n) => {
@@ -84,6 +90,7 @@ function Index() {
         if (filledSteps.indexOf(i) === -1) {
             setFilledSteps(prevS => [...prevS, i]);
         }
+        if(filledSteps.length+1 === maxStep) setHasPaymentDone(true); // Finishing step flow.
     }
 
     const editStep = (i) => {
@@ -92,12 +99,21 @@ function Index() {
 
     return (
         <div className={'wizard'}>
-            <div className={'page-title'}><span>Masterpay</span> Para Yatırma</div>
-            <div className={'steps'} ref={el => steps = el}>
-                {renderSteps()}
-            </div>
+            {
+                !hasPaymentDone && (
+                <>
+                    <div className={'page-title'}><span>Masterpay</span> Para Yatırma</div>
+                    <div className={'steps'} ref={el => steps = el}>
+                        {renderSteps()}
+                    </div>
+                </>
+                )
+            }
+            {
+                hasPaymentDone && <Finalize/>
+            }
         </div>
     )
 }
 
-export default Index;
+export default Wizard;
