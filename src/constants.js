@@ -24,7 +24,7 @@ export const STEP_AMOUNT = {
 };
 export const STEP_VERIFY = {
     name: "STEP_VERIFY",
-    title: "SMS Onay Kodu",
+    title: "SMS onay kodu",
     desc: "Telefonunuza gelen kodu giriniz.",
     editable: false
 };
