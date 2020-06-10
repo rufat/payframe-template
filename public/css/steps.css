@@ -84,7 +84,7 @@
 /* END METHODS STEP */
 
 .bank-logo {
-    width: 151px;
+    max-height: 65px;
 }
 
 /* BEGIN BANKS STEP */
@@ -147,3 +147,47 @@
 }
 
 /* END BANK AUTH STEP */
+
+/* BEGIN VERIFY STEP */
+
+.verify-step > .verify-step-otp {
+    text-align: center;
+    color: #6B30FF;
+    margin: auto;
+    width: 450px;
+}
+
+.verify-step > .verify-step-otp p {
+    margin-top:  20px;
+    margin-bottom:  20px;
+}
+
+.vso-input {
+    font-size: 30px;
+    border: 2px solid #6B30FF;
+    color: #6B30FF;
+    border-radius: 3px;
+    width: 55px !important;
+    height: 65px;
+    margin-left: 10px;
+}
+
+.vso-input[value]:not([value=""]) {
+    background-color: #6B30FF;
+    color: white;
+}
+
+.verify-step > .verify-step-otp > .auth-countdown {
+    background-color: #f7f5ff;
+    color: #6B30FF;
+    width: 120px;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 10px auto;
+}
+
+.verify-step > .verify-step-otp > .auth-note {
+    color: #7A8391;
+}
+
+/* END VERIFY STEP */

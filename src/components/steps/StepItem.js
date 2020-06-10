@@ -1,7 +1,7 @@
 import React from 'react';
 
 function StepItem(props) {
-    const {children, index, maxStep, activeIndex, filledSteps, title, desc, nextStep, editStep} = props;
+    const {children, index, maxStep, activeIndex, filledSteps, title, desc, editable, nextStep, editStep} = props;
     const expanded = activeIndex === index;
     const filled = filledSteps.indexOf(index) !== -1;
 
@@ -33,7 +33,7 @@ function StepItem(props) {
                         {expanded && <div className={'step-desc'}>{desc}</div>}
                     </div>
                 </div>
-                {!expanded && filled && <span className={'step-edit-btn'} onClick={() => editStep(index)}>Düzenle</span>}
+                {editable && (!expanded && filled && <span className={'step-edit-btn'} onClick={() => editStep(index)}>Düzenle</span>)}
             </div>
             {
                 expanded && (

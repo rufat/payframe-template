@@ -1,17 +1,18 @@
 import React, {useState, useEffect, useRef} from 'react';
 import StepItem from '../../components/steps/StepItem';
-import {STEP_METHODS, STEP_BANKS, STEP_BANK_AUTH, STEP_AMOUNT, STEP_TRANSFER} from '../../constants';
+import {STEP_METHODS, STEP_BANKS, STEP_BANK_AUTH, STEP_AMOUNT, STEP_VERIFY, STEP_TRANSFER} from '../../constants';
 import Methods from './Methods/';
 import Banks from './Banks/';
 import BankAuth from './BankAuth/';
 import Amount from './Amount/';
+import Verify from './Verify/';
 import Transfer from './Transfer/';
 
 function Index() {
     const [activeIndex, setActiveIndex] = useState(1);
     const [maxStep, setMaxStep] = useState(0);
     const [filledSteps, setFilledSteps] = useState([]);
-    const stepPages = [STEP_METHODS, STEP_BANKS, STEP_BANK_AUTH, STEP_AMOUNT, STEP_TRANSFER];
+    const stepPages = [STEP_METHODS, STEP_BANKS, STEP_BANK_AUTH, STEP_AMOUNT, STEP_VERIFY, STEP_TRANSFER];
     let steps = useRef();
 
     useEffect(() => {
@@ -28,6 +29,8 @@ function Index() {
                 return <BankAuth/>
             case STEP_AMOUNT.name:
                 return <Amount/>
+            case STEP_VERIFY.name:
+                return <Verify/>
             case STEP_TRANSFER.name:
                 return <Transfer/>
             default:
@@ -37,11 +40,11 @@ function Index() {
 
     const renderSteps = () => {
         let dummyStepsArr = [];
-        for(let x in stepPages) {
+        for (let x in stepPages) {
             dummyStepsArr.push(
                 <StepItem
-                    key={x+'step'}
-                    index={Number(x)+1}
+                    key={x + 'step'}
+                    index={Number(x) + 1}
                     activeIndex={activeIndex}
                     filledSteps={filledSteps}
                     maxStep={maxStep}
@@ -49,6 +52,7 @@ function Index() {
                     editStep={editStep}
                     title={stepPages[x].title}
                     desc={stepPages[x].desc}
+                    editable={stepPages[x].editable}
                 >
                     {getStepDOM(stepPages[x].name)}
                 </StepItem>
@@ -58,15 +62,15 @@ function Index() {
     }
 
     const scrollToRef = (i) => {
-        if(typeof steps.childNodes[i] === 'undefined') return;
-        const ref = steps.childNodes[i];
-        ref.scrollIntoView({ behavior: 'smooth', inline: "center"});
+        if (typeof steps.childNodes[i] === 'undefined') return;
+        const ref = steps.childNodes[i-1];
+        ref.scrollIntoView({behavior: 'smooth', inline: "center"});
     }
 
     const nextStep = (i) => {
-        setActiveIndex(prevS => prevS+1);
+        setActiveIndex(prevS => prevS + 1);
         scrollToRef(i);
-        if(filledSteps.indexOf(i) === -1) {
+        if (filledSteps.indexOf(i) === -1) {
             setFilledSteps(prevS => [...prevS, i]);
         }
     }
