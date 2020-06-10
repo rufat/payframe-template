@@ -1,6 +1,7 @@
 import React from 'react';
 
-function Finalize() {
+function Finalize(props) {
+    const {restartFlow, finishFlow} = props;
     return (
         <div className={'finalize-step'}>
             <div className={'success-mark'} />
@@ -14,8 +15,8 @@ function Finalize() {
                     yoğunluğuna bağlı olarak, zaman alabilir.</p>
             </div>
             <div className={'transfer-actions'}>
-                <button>İşlemi bitir</button>
-                <button className={'inverted-btn'}>Yeni işlem</button>
+                <button onClick={() => finishFlow()}>İşlemi bitir</button>
+                <button className={'inverted-btn'} onClick={() => restartFlow()}>Yeni işlem</button>
             </div>
             <div className={'finalize-footer'}>
                 <p>İşlem detaylarını mail olarak almak ister misiniz? <a href={'#'}>Tıklayın.</a></p>

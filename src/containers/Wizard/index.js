@@ -28,11 +28,17 @@ function Wizard() {
 
     useEffect(() => {
         try {
-            setMaxStep(steps.childNodes.length)
+            setMaxStep(steps.childNodes.length);
         } catch (ex) {
             console.error(ex);
         }
     }, [steps.childNodes])
+
+    const resetFlow = () => {
+        setHasPaymentDone(false);
+        setActiveIndex(1);
+        setFilledSteps([]);
+    }
 
     const getStepDOM = (n) => {
         switch (n) {
@@ -79,7 +85,7 @@ function Wizard() {
     }
 
     const scrollToRef = (i) => {
-        if (typeof steps.childNodes[i] === 'undefined') return;
+        if (!steps || typeof steps.childNodes[i] === 'undefined') return;
         const ref = steps.childNodes[i - 1];
         ref.scrollIntoView({behavior: 'smooth', inline: "center"});
     }
@@ -97,6 +103,15 @@ function Wizard() {
         setActiveIndex(i);
     }
 
+    const restartFlow = () => {
+        resetFlow();
+    }
+
+    const finishFlow = () => {
+        alert('İşlem bitirildi. Pencereyi kapatabilirsiniz.');
+        resetFlow();
+    }
+
     return (
         <div className={'wizard'}>
             {
@@ -110,7 +125,7 @@ function Wizard() {
                 )
             }
             {
-                hasPaymentDone && <Finalize/>
+                hasPaymentDone && <Finalize restartFlow={restartFlow} finishFlow={finishFlow}/>
             }
         </div>
     )
