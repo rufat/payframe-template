@@ -6,16 +6,16 @@ function Banks() {
         <div className={'bank-list'}>
             <div className={'bank-content'}>
                 <select className={'bank-list-select'}>
-                    <option selected disabled>Banka seçiniz</option>
-                    <option>Garanti BBVA</option>
-                    <option>Ziraat</option>
-                    <option>Yapı</option>
-                    <option>İş Bankası</option>
+                    <option selected disabled>Choose a bank</option>
+                    <option>Bank of America</option>
+                    <option>Goldman Sachs</option>
+                    <option>Morgan Stanley</option>
+                    <option>U.S. Bancorp</option>
                 </select>
-                <img className={'bank-logo'} src={'images/banks/garanti.png'} alt={'bank logo'} />
+                <img className={'bank-logo'} src={'images/banks/boa.png'} alt={'bank logo'} />
             </div>
-            <NotifyBox type={'warn'} text={'Garanti bankası için belirtilen Minimum 500TL - Maksimum 5.000TL’dir.'}/>
-            <NotifyBox type={'err'} text={'Garanti Bankası için işleminizde yoğunluğa bağlı olarak gecikme yaşanabilir.'}/>
+            <NotifyBox type={'warn'} text={'The limit for the Bank of America is 500-2000 USD.'}/>
+            <NotifyBox type={'err'} text={'There can be some transaction delays for the Bank of America.'}/>
         </div>
     )
 }

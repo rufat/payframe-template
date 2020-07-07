@@ -6,10 +6,10 @@ function Header() {
             <div className={'items'}>
                 <div className={'logo'}/>
                 <select className={'lang'}>
-                    <option>Turkish</option>
-                    <option>English</option>
-                    <option>Arabic</option>
-                    <option>Russian</option>
+                    <option>English (US)</option>
+                    <option>Italian</option>
+                    <option>French</option>
+                    <option>Spanish</option>
                 </select>
             </div>
         </div>

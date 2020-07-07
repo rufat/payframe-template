@@ -4,7 +4,7 @@ function Footer() {
     return (
         <div className={'footer'}>
             <div className={'f-logo'} />
-            <div className={'f-title'}>Masterpay ile ödemeniz <span>güvende.</span></div>
+            <div className={'f-title'}>Your payment with Masterpay <span>is safe.</span></div>
         </div>
     )
 }

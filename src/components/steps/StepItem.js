@@ -33,7 +33,7 @@ function StepItem(props) {
                         {expanded && <div className={'step-desc'}>{desc}</div>}
                     </div>
                 </div>
-                {editable && (!expanded && filled && <span className={'step-edit-btn'} onClick={() => editStep(index)}>Düzenle</span>)}
+                {editable && (!expanded && filled && <span className={'step-edit-btn'} onClick={() => editStep(index)}>Edit</span>)}
             </div>
             {
                 expanded && (
@@ -45,9 +45,9 @@ function StepItem(props) {
             {
                 expanded && (
                     <div className={'step-bottom'}>
-                        <span>Adım {index} / {maxStep}</span>
-                        {index === maxStep && <button onClick={() => nextStep(activeIndex)}>Bitir</button>}
-                        {index !== maxStep && <button onClick={() => nextStep(activeIndex)}>Devam</button>}
+                        <span>{index} / {maxStep} step</span>
+                        {index === maxStep && <button onClick={() => nextStep(activeIndex)}>Finish</button>}
+                        {index !== maxStep && <button onClick={() => nextStep(activeIndex)}>Next</button>}
                     </div>
                 )
             }

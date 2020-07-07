@@ -5,10 +5,10 @@ function Account() {
     return (
         <div className={'account-step'}>
             <div className={'account-content'}>
-                <img className={'bank-logo'} src={'images/banks/garanti.png'} alt={'bank logo'} />
-                <p>Garanti BBVA için TL hesabı seçiniz</p>
+                <img className={'bank-logo'} src={'images/banks/boa.png'} alt={'bank logo'} />
+                <p>Select an account</p>
                 <select>
-                    <option selected>124 - 566434 MODA</option>
+                    <option selected>124 - 566434</option>
                 </select>
             </div>
         </div>

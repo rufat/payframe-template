@@ -20,7 +20,7 @@ import Finalize from "./Finalize";
 
 function Wizard() {
     const [hasPaymentDone, setHasPaymentDone] = useState(false);
-    const [activeIndex, setActiveIndex] = useState(5);
+    const [activeIndex, setActiveIndex] = useState(1);
     const [maxStep, setMaxStep] = useState(0);
     const [filledSteps, setFilledSteps] = useState([]);
     const stepPages = [STEP_METHODS, STEP_BANKS, STEP_BANK_AUTH, STEP_AMOUNT, STEP_VERIFY, STEP_ACCOUNT, STEP_TRANSFER];
@@ -108,7 +108,7 @@ function Wizard() {
     }
 
     const finishFlow = () => {
-        alert('İşlem bitirildi. Pencereyi kapatabilirsiniz.');
+        alert('Transaction is completed. You can now close the window.');
         resetFlow();
     }
 
@@ -117,7 +117,7 @@ function Wizard() {
             {
                 !hasPaymentDone && (
                 <>
-                    <div className={'page-title'}><span>Masterpay</span> Para Yatırma</div>
+                    <div className={'page-title'}>Payment with <span>Masterpay</span></div>
                     <div className={'steps'} ref={el => steps = el}>
                         {renderSteps()}
                     </div>

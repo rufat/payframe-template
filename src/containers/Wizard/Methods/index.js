@@ -20,8 +20,8 @@ function Methods() {
                 <div className={'method-content'}>
                     <span className={'method-item-icon'}/>
                     <div className={'method-label'}>
-                        <div className={'method-title'}>Banka ile Ödeme</div>
-                        <div className={'method-desc'}>İşlem süresi : 2 Dakika</div>
+                        <div className={'method-title'}>Bank Wire Transfer</div>
+                        <div className={'method-desc'}>Transfer time: 2 min.</div>
                     </div>
                 </div>
             </div>
@@ -36,8 +36,8 @@ function Methods() {
                 <div className={'method-content'}>
                     <span className={'method-item-icon'}/>
                     <div className={'method-label'}>
-                        <div className={'method-title'}>QR ile Ödeme</div>
-                        <div className={'method-desc'}>İşlem süresi : 2 Dakika</div>
+                        <div className={'method-title'}>QR Payment</div>
+                        <div className={'method-desc'}>Transfer time: 2 min.</div>
                     </div>
                 </div>
             </div>
@@ -52,8 +52,8 @@ function Methods() {
                 <div className={'method-content'}>
                     <span className={'method-item-icon'}/>
                     <div className={'method-label'}>
-                        <div className={'method-title'}>Papara ile Ödeme</div>
-                        <div className={'method-desc'}>İşlem süresi : 1 Dakika</div>
+                        <div className={'method-title'}>Paypal</div>
+                        <div className={'method-desc'}>Transfer time: 2 min.</div>
                     </div>
                 </div>
             </div>
@@ -68,8 +68,8 @@ function Methods() {
                 <div className={'method-content'}>
                     <span className={'method-item-icon'}/>
                     <div className={'method-label'}>
-                        <div className={'method-title'}>Bitcoin ile Ödeme</div>
-                        <div className={'method-desc'}>İşlem süresi : 5 Dakika</div>
+                        <div className={'method-title'}>Bitcoin</div>
+                        <div className={'method-desc'}>Transfer time: 2 min.</div>
                     </div>
                 </div>
             </div>
