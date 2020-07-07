@@ -20,8 +20,8 @@ function Verify() {
                         onChange={v => setCode(v)}
                         value={code}
                         numInputs={4}
-                        isInputNum
-                        shouldAutoFocus
+                        isInputNum={true}
+                        shouldAutoFocus={true}
                     />
                 </div>
                 <div className={'auth-countdown'}>
