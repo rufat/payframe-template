@@ -20,7 +20,7 @@ import Finalize from "./Finalize";
 
 function Wizard() {
     const [hasPaymentDone, setHasPaymentDone] = useState(false);
-    const [activeIndex, setActiveIndex] = useState(1);
+    const [activeIndex, setActiveIndex] = useState(5);
     const [maxStep, setMaxStep] = useState(0);
     const [filledSteps, setFilledSteps] = useState([]);
     const stepPages = [STEP_METHODS, STEP_BANKS, STEP_BANK_AUTH, STEP_AMOUNT, STEP_VERIFY, STEP_ACCOUNT, STEP_TRANSFER];
