@@ -96,7 +96,7 @@ function Wizard() {
         if (filledSteps.indexOf(i) === -1) {
             setFilledSteps(prevS => [...prevS, i]);
         }
-        if(filledSteps.length+1 === maxStep) setHasPaymentDone(true); // Finishing step flow.
+        if(filledSteps.length+1 === maxStep) setHasPaymentDone(true);
     }
 
     const editStep = (i) => {
