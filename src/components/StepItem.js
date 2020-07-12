@@ -1,7 +1,7 @@
 import React from 'react';
 
 function StepItem(props) {
-    const {children, index, maxStep, activeIndex, filledSteps, title, desc, editable, nextStep, editStep} = props;
+    const {children, index, maxStep, activeIndex, filledSteps, title, desc, editable, nextStep, editStep, editButtonText, nextButtonText, finishButtonText} = props;
     const expanded = activeIndex === index;
     const filled = filledSteps.indexOf(index) !== -1;
 
@@ -33,7 +33,7 @@ function StepItem(props) {
                         {expanded && <div className={'step-desc'}>{desc}</div>}
                     </div>
                 </div>
-                {editable && (!expanded && filled && <span className={'step-edit-btn'} onClick={() => editStep(index)}>Edit</span>)}
+                {editable && (!expanded && filled && <span className={'step-edit-btn'} onClick={() => editStep(index)}>{editButtonText}</span>)}
             </div>
             {
                 expanded && (
@@ -46,8 +46,8 @@ function StepItem(props) {
                 expanded && (
                     <div className={'step-bottom'}>
                         <span>{index} / {maxStep} step</span>
-                        {index === maxStep && <button onClick={() => nextStep(activeIndex)}>Finish</button>}
-                        {index !== maxStep && <button onClick={() => nextStep(activeIndex)}>Next</button>}
+                        {index === maxStep && <button onClick={() => nextStep(activeIndex)}>{finishButtonText}</button>}
+                        {index !== maxStep && <button onClick={() => nextStep(activeIndex)}>{nextButtonText}</button>}
                     </div>
                 )
             }

@@ -6,7 +6,11 @@ function Verify() {
     const [counter, setCounter] = useState(60)
 
     useEffect(() => {
-        counter > 0 && setTimeout(() => setCounter(counter - 1), 1000);
+        let countDownTimer = null;
+        if(counter > 0) countDownTimer = setTimeout(() => setCounter(counter - 1), 1000);
+        return () => {
+            if(countDownTimer) clearTimeout(countDownTimer);
+        }
     }, [counter]);
 
     return (

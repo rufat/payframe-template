@@ -1,3 +1,7 @@
+export const NEXT_BUTTON = "Next";
+export const FINISH_BUTTON = "Finish";
+export const EDIT_BUTTON = "Edit";
+
 export const STEP_METHODS = {
     name: "STEP_METHODS",
     title: "Payment methods",

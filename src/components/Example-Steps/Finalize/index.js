@@ -18,7 +18,7 @@ function Finalize(props) {
                 <button className={'inverted-btn'} onClick={() => restartFlow()}>New transaction</button>
             </div>
             <div className={'finalize-footer'}>
-                <p>Would you like to receive a transaction receipt by mail? <a href={'#'}>Yes, send.</a></p>
+                <p>Would you like to receive a transaction receipt by mail? <a href={'#send'}>Yes, send.</a></p>
             </div>
         </div>
     )

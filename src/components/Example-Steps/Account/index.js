@@ -1,5 +1,4 @@
 import React from 'react';
-import NotifyBox from "../../../components/NotifyBox";
 
 function Account() {
     return (

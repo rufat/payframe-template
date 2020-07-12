@@ -1,5 +1,5 @@
 import React from 'react';
-import NotifyBox from "../../../components/NotifyBox";
+import NotifyBox from "../../NotifyBox";
 
 function BankAuth() {
     return (
