@@ -76,9 +76,7 @@ function Wizard({heading, headingBold, stepItems, stepSuccess}) {
     }
 
     // Changing the active step item index to a specific step-item for editing.
-    const editStep = (i) => {
-        setActiveIndex(i);
-    }
+    const editStep = (i) => setActiveIndex(i);
 
     return (
         <div className={'wizard'}>
