@@ -27,6 +27,8 @@ import Account from "./components/Example-Steps/Account";
 import Finalize from "./components/Example-Steps/Finalize";
 
 function Main() {
+
+  // Declare the languages you're supporting. Language change will trigger "langChange" function below.
   const languages = [
     { id: 1, name: "English (US)" },
     { id: 2, name: "Spanish" },
@@ -34,6 +36,22 @@ function Main() {
     { id: 4, name: "Italian" },
   ];
 
+  function langChange(id) {
+    try {
+      const langID = id?.target?.value;
+      const langName = languages.filter((l) => l.id === Number(langID))[0]?.name;
+      alert(`Language clicked: ${langName}`);
+    } catch (ex) {
+      console.error(ex);
+    }
+  }
+
+  /*
+    This is an example of steps with ready-to-use templates.
+    stepItems is <Array> and requires <Objects> as a indexes. The <Object> requires "config" and "component" keys.
+    config<Object> - It provides name<String>, title<String>, desc<String>, editable<Boolean>.
+    component<JSX> - A generic React component for rendering.
+  */
   const stepItems = [
     {
       config: STEP_METHODS,
@@ -65,19 +83,17 @@ function Main() {
     },
   ];
 
-  function langChange(id) {
-    try {
-      const langID = id?.target?.value;
-      const langName = languages.filter((l) => l.id === Number(langID))[0]?.name;
-      alert(`Language clicked: ${langName}`);
-    } catch (ex) {
-      console.error(ex);
-    }
-  }
-
   return (
     <div className={"container"}>
-      <Header onChange={langChange} langs={languages} />
+      {/*
+        Header receives only "langs" Array<Object> and "onChange" <Function> props.
+        The logo should be updated from CSS (background-image).
+      */}
+      <Header langs={languages} onChange={langChange} />
+
+      {/*
+        Wizard receives only "heading" <String>, "headingBold" <String> [Optional], "stepItems" Array<Object>, and "stepSuccess" <JSX> props.
+      */}
       <Wizard
         heading={"Payment with"}
         headingBold={"Masterpay"}
@@ -89,6 +105,10 @@ function Main() {
           />
         }
       />
+
+      {/*
+        Footer receives only "text" <String>, "textUnderline" <String> [Optional], and "hideLogo" <Boolean> [Optional] props.
+      */}
       <Footer
         text={"Your payment with Masterpay"}
         textUnderline={"is safe."}
