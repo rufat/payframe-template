@@ -28,7 +28,7 @@ import Finalize from "./components/Example-Steps/Finalize";
 
 function Main() {
 
-  // Declare the languages you're supporting. Language change will trigger "langChange" function below.
+  // Declare the languages you're supporting. Changing language will trigger "langChange" function below.
   const languages = [
     { id: 1, name: "English (US)" },
     { id: 2, name: "Spanish" },
