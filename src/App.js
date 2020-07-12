@@ -1,4 +1,6 @@
 import React from "react";
+
+// Importing the body parts of the wizard.
 import Header from "./components/Header";
 import Wizard from "./containers/Main.js";
 import Footer from "./components/Footer";
@@ -64,9 +66,13 @@ function Main() {
   ];
 
   function langChange(id) {
-    const langID = id?.target?.value;
-    const langName = languages.filter((l) => l.id === Number(langID))[0]?.name;
-    alert(`Language clicked: ${langName}`);
+    try {
+      const langID = id?.target?.value;
+      const langName = languages.filter((l) => l.id === Number(langID))[0]?.name;
+      alert(`Language clicked: ${langName}`);
+    } catch (ex) {
+      console.error(ex);
+    }
   }
 
   return (
