@@ -1,6 +1,6 @@
 {
-  "short_name": "Payframe",
-  "name": "A payframe template",
+  "short_name": "QuickPay",
+  "name": "QuickPay Payment Wizard",
   "icons": [
     {
       "src": "favicon.ico",

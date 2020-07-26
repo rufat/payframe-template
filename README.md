@@ -1,5 +1,6 @@
 ## Welcome to Payment Wizard Form
 ---
+Thank you for purchasing!
 
 ### Folder structure
  - src
@@ -20,3 +21,6 @@
 `` npm start `` - Run the development server.
 
 `` npm build `` - Building the project (/build path).
+
+### Documentation
+<b>For more information please check the [documentation](documentation/index.html) folder.</b>
