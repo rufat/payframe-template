@@ -1,0 +1,131 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>QuickPay Payment Wizard - Documentation</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<style type="text/css" media="screen">
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+	</style>
+</head>
+
+
+<body>
+	<div class="container">
+	
+		<h3 class="center alt">&ldquo;QuickPay Payment Wizard&rdquo; Documentation by &ldquo;BucketGO&rdquo; v1.0</h3>
+		
+		<hr>
+		
+		<h1 class="center">&ldquo;QuickPay Payment Wizard&rdquo;</h1>
+		
+		<div class="borderTop">
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+					<strong>
+					Created: 07/26/2020<br>
+					By: BucketGO
+					</strong>
+				</p>
+			</div>	
+	
+			<div class="span-12 last">
+				<p class="prepend-top append-0">Thank you for purchasing my theme. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form <a href="https://codecanyon.net/user/bucketgo" target="_blank">here</a>. Thanks so much!</p>
+			</div>
+		</div>
+		
+		<hr>
+		
+		<h2 id="toc" class="alt">Contents</h2>
+		<ol class="alpha">
+			<li><a href="#componentsstructure">Components structure</a></li>
+			<li><a href="#headercomponent">&lt;Header&gt; component</a></li>
+			<li><a href="#wizardcomponent">&lt;Wizard&gt; component</a></li>
+			<li><a href="#footercomponent">&lt;Footer&gt; component</a></li>
+			<li><a href="#cssstructure">CSS structure</a></li>
+		</ol>
+		
+		<hr>
+		
+		<h3 id="componentsstructure"><strong>A) Components structure</strong> - <a href="#toc">top</a></h3>
+		<p>
+			In App.js, we have added the wizard's required main components. As you can see in the preview image, There are three components; "Header", "Wizard", and "Footer". "Header" and "Footer" components are optional. "Wizard" component can work without them, independently.
+		</p>
+		
+		<a href="assets/images/componentstructure.png" target="_blank"><img width="100%" src="assets/images/componentstructure.png" alt="Component structure" /></a>
+		<p>(src/App.js)</p>
+
+		<hr>
+
+		<h3 id="headercomponent"><strong>B) &lt;Header&gt; component</strong> - <a href="#toc">top</a></h3>
+
+		<p>The "Header" component requires only "langs" and "onChange" props.</p>	
+		<img src="assets/images/languagesconstants.png" alt="Languages constant" />
+		<p>The "langs" prop should be an Array&lt;Object&gt;. You can easily change the constant languages with API data.</p>
+
+		<p>"onChange" function returns "id" of the language you provided.</p>
+		<img src="assets/images/langchangefunction.png" alt="Language change function" />
+
+		<hr>
+		
+		<h3 id="wizardcomponent"><strong>C) &lt;Wizard&gt; component</strong> - <a href="#toc">top</a></h3>
+		<img src="assets/images/wizardcomponentjsx.png" alt="&lt;Wizard&gt; component JSX" />
+		<p>"Wizard" component requires:</p>
+		<ul>
+			<li><b>"heading"</b> - A string header title prop.</li>
+			<li><b>"headingBold"</b> - A string header bold title prop. It is an optional prop.</li>
+			<li><b>"stepItems"</b> - An Array&lt;Object&gt; which contains step item JSX components.</li>
+			<li><b>"stepSuccess"</b> - A JSX container prop. This JSX will be rendered when the wizard is completed. We have included an example step called "Finalize".</li>
+		</ul>
+
+		<img src="assets/images/stepitemsarray.png" alt="Step item array" />
+		<p>You will need to provide <b>"config"</b> and <b>"component"</b> properties for each step array element.</p>
+		<p><b>A step-item config example:</b></p>
+		<img src="assets/images/stepconfigobject.png" alt="Step item config object" />
+		<p>(src/constants.js)</p>
+		<ul>
+			<li><b>"name"</b> - A unique string ID for the step.</li>
+			<li><b>"tittle"</b> - A title name for the step.</li>
+			<li><b>"desc"</b> - A description for the step which will be under the title.</li>
+			<li><b>"editable"</b> - A boolean prop that receives "true" or "false" value for allowing to edit the completed item after skipping it.</li>
+		</ul>
+		<img width="100%" src="assets/images/examplestepitem.png" alt="An example step item" />
+		<hr>
+
+		<h3 id="footercomponent"><strong>C) &lt;Footer&gt; component</strong> - <a href="#toc">top</a></h3>
+		<img src="assets/images/footercomponent.png" alt="Footer component" />
+		<p>In the "Footer" component, you need to provide:</p>
+		<ul>
+			<li><b>"text"</b> - A string text title prop.</li>
+			<li><b>"textUnderline"</b> - A string text bold title prop. It is an optional prop.</li>
+			<li><b>"hideLogo"</b> - A boolean prop that receives "true" or "false" value for allowing to hide or show the footer logo. It is also optional.</li>
+		</ul>
+		<hr>
+
+		<h3 id="cssstructure"><strong>D) CSS structure</strong> - <a href="#toc">top</a></h3>
+		<img src="assets/images/cssfiles.png" alt="CSS files" />
+		<p>(public/css)</p>
+		<ul>
+			<li><b>index.css</b> - Contains default stylings and imports 3 other core CSS files (skin.css, main.css, steps.css).</li>
+			<li><b>main.css</b> - Container, step-item stylings, and media queries.</li>
+			<li><b>reset.css</b> - Reducing browser inconsistencies in things like default line heights, margins, font sizes of headings, and etc.</li>
+			<li><b>skin.css</b> - Contains reusable component theme stylings.</li>
+			<li><b>steps.css</b> - You can change the ready to use step themes' styling from this stylesheet file.</li>
+		</ul>
+		<p><b>Note:</b> The logos are "<u>background-image</u>" inside of the "main.css" file.</p>
+
+		<hr>
+		
+		<p>Once again, thank you so much for purchasing this theme. As I said at the beginning, I'd be glad to help you if you have any questions relating to this React component. No guarantees, but I'll do my best to assist.</p> 
+		
+		<p class="append-bottom alt large"><a href="https://codecanyon.net/user/bucketgo" target="_blank"><strong>BucketGO</strong></a></p>
+		<p><a href="#toc">Go To Contents</a></p>
+		
+		<hr class="space">
+	</div>
+</body>
+</html>

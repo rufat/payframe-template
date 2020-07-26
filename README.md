@@ -14,9 +14,9 @@
     - App.js
     - constants.js
 
-### Instructions
+### Installation
 `` npm install `` - Install required modules.
 
-`` npm start `` - Run the server.
+`` npm start `` - Run the development server.
 
 `` npm build `` - Building the project (/build path).
