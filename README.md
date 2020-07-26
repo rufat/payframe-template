@@ -23,4 +23,4 @@ Thank you for purchasing!
 `` npm build `` - Building the project (/build path).
 
 ### Documentation
-<b>For more information please check the [documentation](documentation/index.html) folder.</b>
+<b>For more information please check the [documentation](documentation/index.html).</b>

@@ -1,7 +1,7 @@
 export const HEADING_TITLE = "Payment with";
-export const HEADING_TITLE_BOLD = "Masterpay";
+export const HEADING_TITLE_BOLD = "QuickPay";
 
-export const FOOTER_TITLE = "Your payment with Masterpay";
+export const FOOTER_TITLE = "Your payment with QuickPay";
 export const FOOTER_TITLE_UNDERLINE = "is safe.";
 
 export const NEXT_BUTTON = "Next";
