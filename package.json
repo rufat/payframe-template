@@ -1,5 +1,5 @@
 {
-  "name": "pay-iframe",
+  "name": "quickpay-payment-wizard",
   "version": "2.1.0",
   "private": true,
   "dependencies": {

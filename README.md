@@ -20,7 +20,7 @@ Thank you for purchasing!
 
 `` npm start `` - Run the development server.
 
-`` npm build `` - Building the project (/build path).
+`` npm run build `` - Building the project (/build path).
 
 ### Documentation
 <b>For more information please check the [documentation](documentation/index.html).</b>
