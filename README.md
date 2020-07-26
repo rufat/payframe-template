@@ -1,4 +1,4 @@
-## Welcome to Masterpay - A Payment Wizard Form
+## Welcome to Payment Wizard Form
 ---
 
 ### Folder structure
@@ -12,3 +12,11 @@
     - containers
       - Main.js
     - App.js
+    - constants.js
+
+### Instructions
+`` npm install `` - Install required modules.
+
+`` npm start `` - Run the server.
+
+`` npm build `` - Building the project (/build path).

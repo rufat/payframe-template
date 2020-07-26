@@ -14,6 +14,11 @@ import {
   STEP_VERIFY,
   STEP_ACCOUNT,
   STEP_TRANSFER,
+  LANGUAGES,
+  HEADING_TITLE,
+  HEADING_TITLE_BOLD,
+  FOOTER_TITLE,
+  FOOTER_TITLE_UNDERLINE,
 } from "./constants";
 
 // Importing the step item templates.
@@ -27,19 +32,11 @@ import Account from "./components/Example-Steps/Account";
 import Finalize from "./components/Example-Steps/Finalize";
 
 function Main() {
-
-  // Declare the languages you're supporting. Changing language will trigger "langChange" function below.
-  const languages = [
-    { id: 1, name: "English (US)" },
-    { id: 2, name: "Spanish" },
-    { id: 3, name: "French" },
-    { id: 4, name: "Italian" },
-  ];
-
+    // Changing the language from dropdown will trigger "langChange" function.
   function langChange(id) {
     try {
       const langID = id?.target?.value;
-      const langName = languages.filter((l) => l.id === Number(langID))[0]?.name;
+      const langName = LANGUAGES.filter((l) => l.id === Number(langID))[0]?.name;
       alert(`Language clicked: ${langName}`);
     } catch (ex) {
       console.error(ex);
@@ -89,14 +86,14 @@ function Main() {
         Header receives only "langs" Array<Object> and "onChange" <Function> props.
         The logo should be updated from CSS (background-image).
       */}
-      <Header langs={languages} onChange={langChange} />
+      <Header langs={LANGUAGES} onChange={langChange} />
 
       {/*
         Wizard receives only "heading" <String>, "headingBold" <String> [Optional], "stepItems" Array<Object>, and "stepSuccess" <JSX> props.
       */}
       <Wizard
-        heading={"Payment with"}
-        headingBold={"Masterpay"}
+        heading={HEADING_TITLE}
+        headingBold={HEADING_TITLE_BOLD}
         stepItems={stepItems}
         stepSuccess={
           <Finalize
@@ -110,8 +107,8 @@ function Main() {
         Footer receives only "text" <String>, "textUnderline" <String> [Optional], and "hideLogo" <Boolean> [Optional] props.
       */}
       <Footer
-        text={"Your payment with Masterpay"}
-        textUnderline={"is safe."}
+        text={FOOTER_TITLE}
+        textUnderline={FOOTER_TITLE_UNDERLINE}
         hideLogo={false}
       />
     </div>
