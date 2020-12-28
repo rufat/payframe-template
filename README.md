@@ -1,6 +1,5 @@
 ## Welcome to Payment Wizard Form
 ---
-Thank you for purchasing!
 
 ### Folder structure
  - src
