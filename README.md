@@ -1,7 +1,10 @@
 ## Payment Wizard Form - [Demo](https://demo-payframe.netlify.app/)
----
-
 #### Author: Rufat Mammadli ([twitter](https://twitter.com/rufatmammadli))
+
+<img src="https://github.com/rufat/payframe-masterpay/blob/master/documentation/assets/feature.png?raw=true">
+
+### Screenshot
+<img src="https://github.com/rufat/payframe-masterpay/blob/master/documentation/assets/screenshot.png?raw=true">
 
 ### Folder structure
  - src
