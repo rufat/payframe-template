@@ -1,6 +1,8 @@
 ## Welcome to Payment Wizard Form
 ---
 
+#### Author: Rufat Mammadli ([twitter](https://twitter.com/rufatmammadli))
+
 ### Folder structure
  - src
     - components
