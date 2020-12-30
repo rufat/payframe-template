@@ -98,9 +98,3 @@ In the "Footer" component, you need to provide:
 **Note:** The logos are "background-image" inside of the "main.css" file.
 
 * * *
-
-Once again, thank you so much for purchasing this theme. As I said at the beginning, I'd be glad to help you if you have any questions relating to this React component. No guarantees, but I'll do my best to assist.
-
-[**Rufat Mammadli**](https://twitter.com/rufatmammadli)
-
-* * *
