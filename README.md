@@ -27,4 +27,4 @@
 `` npm run build `` - Building the project (/build path).
 
 ### Documentation
-<b>For more information please check the [documentation](documentation/index.html).</b>
+<b>For more information please check the [documentation](documentation/docs.md).</b>
