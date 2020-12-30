@@ -96,5 +96,3 @@ In the "Footer" component, you need to provide:
 *   **steps.css** - You can change the ready to use step themes' styling from this stylesheet file.
 
 **Note:** The logos are "background-image" inside of the "main.css" file.
-
-* * *
